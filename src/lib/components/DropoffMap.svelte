@@ -88,6 +88,8 @@
       }
 
       marker.bindPopup(popupParts.join('<br>'));
+      marker.on('mouseover', () => marker.openPopup());
+      marker.on('mouseout', () => marker.closePopup());
 
       marker.addTo(markerLayer);
     }

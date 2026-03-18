@@ -34,5 +34,10 @@
     padding: 1rem;
     border-top: 1px solid var(--color-white);
     background: var(--color-white);
+    font-size: var(--font-size-sm);
+  }
+  .content :global(p) {
+    font-size: var(--font-size-sm);
+    line-height: var(--leading-normal);
   }
 </style>
