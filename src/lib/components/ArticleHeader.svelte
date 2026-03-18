@@ -79,7 +79,7 @@ USAGE EXAMPLE:
     font-weight: var(--font-weight-bold);
     line-height: var(--leading-tight);
     margin-bottom: var(--spacing-sm);
-    color: var(--color-dark);
+    color: black;
   }
 
   .meta {
@@ -88,7 +88,7 @@ USAGE EXAMPLE:
     align-items: flex-start;
     gap: var(--spacing-xs);
     padding: var(--font-size-xs) var(--spacing-sm);
-    border-left: var(--border-width-accent) solid var(--color-accent);
+    border-left: var(--border-width-accent) solid forestgreen;
     background-color: var(--color-light-gray);
   }
 

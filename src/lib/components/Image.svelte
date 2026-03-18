@@ -74,16 +74,22 @@ USAGE EXAMPLE:
   .size-large {
     width: 100%;
     max-width: var(--max-width-image-large);
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .size-medium {
     width: 100%;
     max-width: var(--max-width-image-medium);
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .size-small {
     width: 100%;
     max-width: var(--max-width-image-small);
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .image {

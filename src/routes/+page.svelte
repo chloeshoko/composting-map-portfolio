@@ -6,20 +6,18 @@ This is your page!
   // Import all the news furniture components
   import ArticleHeader from '$lib/components/ArticleHeader.svelte';
   import ArticleBody from '$lib/components/ArticleBody.svelte';
+  import DropoffMap from '$lib/components/DropoffMap.svelte';
   import Image from '$lib/components/Image.svelte';
-  import RelatedLinks from '$lib/components/RelatedLinks.svelte';
+  import ReadMore from '$lib/components/ReadMore.svelte';
+  import Timeline from '$lib/components/Timeline.svelte';
+  import ContextBox from '$lib/components/ContextBox.svelte'; 
+
+  let { data } = $props();
 
   // Article metadata
-  let headline = 'Become a force for good. Join our next class.';
-  let byline = 'NYCity News Service';
-  let pubDate = '2026-01-31';
-
-  // Related stories
-  const relatedStories = [
-    { headline: 'How America\'s top news organizations escape rigid publishing systems to design beautiful data-driven stories on deadline.', href: 'https://palewi.re/docs/coding-the-news/' },
-    { headline: 'How to install, configure and use Visual Studio Code, GitHub and Copilot', href: 'https://palewi.re/docs/coding-the-news/scripts/week-1/' },
-    { headline: "How to publish a website with Node.JS and GitHub Actions", href:"https://palewi.re/docs/coding-the-news/scripts/week-2/"},
-  ];
+  let headline = 'Mayor-Elect Mamdani Signals the City Will Keep Mandatory Composting';
+  let byline = 'Chloe Rogers';
+  let pubDate = '2025-12-18';
 </script>
 
 <!-- This sets the page title in the browser tab -->
@@ -40,55 +38,152 @@ This is your page!
 
   <!-- Lead Image: Animated gif of students at the journalism school -->
   <Image
-    src="/example-photo.gif"
+    src="/bins.JPG"
     alt="The Craig Newmark Graduate School of Journalism is at 219 West 40th Street in Midtown Manhattan."
-    caption="The Craig Newmark Graduate School of Journalism is at 219 West 40th Street in Midtown Manhattan."
-    credit="Craig Newmark Graduate School of Journalism"
+    caption="New York City waste bins"
+    credit="Chloe Rogers"
   />
 
   <!-- Article Body: The main story text with proper typography -->
   <ArticleBody>
     <p>
-      At the Craig Newmark Graduate School of Journalism at the City University of New York, change is in our DNA. That comes of being born in 2006, as the digital revolution was transforming our profession in ways none of us could have imagined.
+      Mayor-elect Zohran Mamdani has signaled that New York City will maintain its requirement that residents separate their organic waste — food scraps, compostable paper and yard trimmings — from other trash. 
     </p>
 
     <p>
-      We fashioned a school to teach the latest storytelling, entrepreneurial, and technological skills alongside reporting, writing, and ethics. Beyond that, we’ve crafted a culture that spurns complacency, that isn’t afraid to pivot before the ground under us shifts.
+      The organic waste is processed into compost or renewable energy, a key component of reducing the city’s carbon footprint and the amount of waste sent to landfills. The Department of Sanitation states that residents can be fined up to $300 for noncompliance. But Mayor Eric Adams paused most enforcement just weeks after ticketing began in April, saying fines would resume sometime in 2026. 
+    </p>
+     
+    <p>
+      Under Adams’ pause, enforcement is paused for most buildings, except for those with more than 30 units that receive four warnings. The agency continues to issue warnings to residents in buildings of all sizes as an educational reminder that participation is mandatory, but fines are not being issued at this time beyond that exception.
     </p>
 
     <p>
-      Our mission is to serve the public interest – by training new journalists from varied economic, racial, and cultural backgrounds who will bring much-needed diversity to newsrooms, by helping mid-career journalists retool their skills, and by partnering with other media organizations to find new paths to excellence.
+      With fines set to resume sometime in 2026 and a new mayor taking office in January, the future of enforcement is uncertain. Meanwhile, the city is capturing only 10 percent of its organic waste — a fraction of what it needs to meet its goal of sending zero waste to landfills by 2030."
+    </p>
+    <p>
+      Asked how he would handle the issue, Mamdani said at a press conference on December 9th, “we have to fully follow through on the policies we have,” adding that there is “a fatigue with constantly changing policies in New York City and an inability to follow through.” 
     </p>
 
     <p>
-      Our low tuition rates, along with the added backing of private donors, allow candidates for our master’s degrees in journalism and engagement journalism to receive a world-class education at an affordable price. We also offer a unique bilingual master’s in journalism for students fluent in English and Spanish.
+     New Yorkers have been required to separate organic waste since October 2024. When ticketing for noncompliance began in April 2025, the residential organic waste capture rate increased by nearly 200 percent, rising to more than 9,000 tons in April from about 3,100 tons in March, according to NYC Open Data. 
+     </p>
+
+     <Timeline
+      events={[
+        {
+          date: 'October 2024',
+          description: 'New York City required residents to separate organic waste from their trash'
+        },
+        {
+          date: 'April 1, 2025',
+          description: 'Ticketing for noncompliance began'
+        },
+        {
+          date: 'April 18, 2025',
+          description: "Mayor Eric Adams paused fines, saying they\'d start back up sometime in 2026"
+        }
+      ]}
+    />
+
+     <iframe title="Residential Food Waste Collected in NYC, 2025 (tons)" 
+     aria-label="Line chart" 
+     id="datawrapper-chart-XNbGX" 
+     src="https://datawrapper.dwcdn.net/XNbGX/3/" 
+     scrolling="no" 
+     frameborder="0" 
+     style="width: 0; min-width: 100% !important; border: none; margin-top: var(--spacing-sm); margin-bottom: var(--spacing-sm);" 
+     height="410" 
+     data-external="1"></iframe><script type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});
+    </script>
+     
+    <div class="datawrapper-map-box">
+      <iframe title="Organic Waste Collection Spiked Across NYC When Fines Began in April 2025" 
+      aria-label="Choropleth map" 
+      id="datawrapper-chart-ElVSn" 
+      class="datawrapper-map-frame"
+      src="https://datawrapper.dwcdn.net/ElVSn/3/" 
+      scrolling="no" 
+      frameborder="0" 
+      style="width: 0; min-width: 100% !important; border: none;" 
+      height="800" 
+      data-external="1">
+      </iframe>
+    </div>
+     <script type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});
+    </script>
+
+     <p>
+     Enforcement halted in April and while the capture rate gradually decreased between May and October, November’s totals reached record highs, according to the Department of Sanitation. Even so, the city is only capturing a fraction of its organic waste. 
+     </p>
+
+    <p>
+      Michael Crorkin, 25, the superintendent of an 18-unit apartment building in Murray Hill, said fines are “absolutely necessary,” arguing that without them, a lot of buildings would avoid complying.
     </p>
 
     <p>
-      Our three media centers provide research, training, thought leadership, industry meet-ups, and financial support for quality journalistic work.
+     Still, he says most residents either don’t want to separate organics or don’t know how to do it properly. 
+     </p>
+
+    <p>
+      “Just based on what I’ve seen with regular garbage and how they can’t even separate recycling like plastics and paper from regular waste, I don’t think they’re gonna take the time to compost,” Crorkin said. He added participation might increase if tenants were provided small in-unit compost bins, making separation easier to build into their daily routines. 
     </p>
 
     <p>
-      We also offer a robust professional education program through regular evening and weekend workshops. And we support in-depth reporting projects of professional journalists through fellowship grants.
+      Crorkin's skepticism is borne out by the numbers — the city is only capturing about 10 percent of its organic waste. Samantha MacBride, a professor at Baruch College who teaches sustainability, said that means a significant portion of the city's roughly $500 million annual waste export budget is spent transporting organics to landfills that could have been diverted.
+    </p>
+    
+    <p>
+      MacBride said the core issue is a lack of effective education by the Department of Sanitation. While the department said in a request for comment that it has conducted a “massive amount of public education including knocking on nearly 800,000 doors,” MacBride said that the department has failed to work with owners and managers of apartment buildings to increase participation, noting that they are only required to place the correct bins outside.
     </p>
 
     <p>
-      Classes are led by accomplished full-time faculty and adjuncts, who tap their networks to help students and graduates find internships, freelance opportunities and — the ultimate prize — jobs.
+      “ There’s a far cry between doing that and actually getting a system going in your building where some or most of the people are contributing their food scraps,” she said. 
+    </p>
+
+    <p>Marisa DeDominicis, co-founder and executive director of the community composting organization Earth Matter, said that the city should prioritize education starting as early as kindergarten. She said it’s more effective for people to understand why composting matters and how they can participate so they “feel good about their actions” rather than having stress or anxiety about getting a fine. 
     </p>
 
     <p>
-      At a time when our profession is reeling from financial pressures and lack of trust, the Newmark Graduate School of Journalism is committed to producing the next generation of skilled, ethically minded, and diverse journalists.
+      Meanwhile, the City Council’s Common Sense Caucus is pushing to eliminate the mandate to separate organic waste altogether, arguing that participation should be voluntary.
     </p>
 
     <p>
-      We invite you to be part of our world.
+      “Forcible mandates are wrong every time, whether they are forced vaccinations or mandated composting,” said Joann Ariola, caucus co-chair and council member. “People should still be free to choose. This is still America.”
     </p>
-  </ArticleBody>
 
-  <!-- Related Stories: Links to other articles -->
-  <RelatedLinks
-    title="Related Stories"
-    links={relatedStories}
-  />
+    <ContextBox
+      title="In addition to curbside pickup, how else can New Yorkers drop off their food scraps?"
+      items={[
+        "The city has 400 bright orange Smart Composting Bins, accessible 24/7 via the free NYC Compost app. They accept all food scraps and plant waste, including meat, dairy, and prepared foods.",
+        "More than 200 additional drop-off sites at community gardens, parks, schools, and nonprofits are also available across the five boroughs — but most do not accept meat, dairy, or prepared food. Hours and accepted materials vary by site.",
+      ]}      
+    />
+
+    <DropoffMap points={data.dropoffs} />
+
+    <ReadMore title="About the map data">
+      <p>
+        This map uses <a href=https://data.cityofnewyork.us/Environment/Food-Scrap-Drop-Off-Locations-in-NYC/if26-z6xq/about_dataNYC>NYC Open Data</a> on Food Scrap Drop-Off Sites from the Department of Sanitation.
+        It currently includes {data.dropoffs.length} locations with valid coordinates.
+      </p>
+    </ReadMore>
+  
+</ArticleBody>
+
+  
 
 </div>
+
+<style>
+  .datawrapper-map-box {
+    margin: var(--spacing-sm) 0 var(--spacing-md);
+    padding: var(--spacing-sm);
+    background: var(--color-white);
+    border-radius: var(--border-radius-sm);
+  }
+
+  .datawrapper-map-frame {
+    display: block;
+  }
+</style>

@@ -43,13 +43,13 @@ USAGE EXAMPLE:
 
   /* Links within article body */
   .article-body :global(a) {
-    color: var(--color-dark);
+    color: var(--color-accent);
     text-decoration: underline;
     text-underline-offset: 2px;
   }
 
   .article-body :global(a:hover) {
-    color: var(--color-accent);
+    color: var(--color-cuny-blue-dark);
   }
 
   /* Subheadings within article */
