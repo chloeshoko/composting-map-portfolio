@@ -58,18 +58,7 @@ This is your page!
       Under Adams’ pause, enforcement is paused for most buildings, except for those with more than 30 units that receive four warnings. The agency continues to issue warnings to residents in buildings of all sizes as an educational reminder that participation is mandatory, but fines are not being issued at this time beyond that exception.
     </p>
 
-    <p>
-      With fines set to resume sometime in 2026 and a new mayor taking office in January, the future of enforcement is uncertain. Meanwhile, the city is capturing only 10 percent of its organic waste — a fraction of what it needs to meet its goal of sending zero waste to landfills by 2030."
-    </p>
-    <p>
-      Asked how he would handle the issue, Mamdani said at a press conference on December 9th, “we have to fully follow through on the policies we have,” adding that there is “a fatigue with constantly changing policies in New York City and an inability to follow through.” 
-    </p>
-
-    <p>
-     New Yorkers have been required to separate organic waste since October 2024. When ticketing for noncompliance began in April 2025, the residential organic waste capture rate increased by nearly 200 percent, rising to more than 9,000 tons in April from about 3,100 tons in March, according to NYC Open Data. 
-     </p>
-
-     <Timeline
+    <Timeline
       events={[
         {
           date: 'October 2024',
@@ -86,18 +75,33 @@ This is your page!
       ]}
     />
 
+    <p>
+      With fines set to resume sometime in 2026 and a new mayor taking office in January, the future of enforcement is uncertain. Meanwhile, the city is capturing only 10 percent of its organic waste — a fraction of what it needs to meet its goal of sending zero waste to landfills by 2030."
+    </p>
+    <p>
+      Asked how he would handle the issue, Mamdani said at a press conference on December 9th, “we have to fully follow through on the policies we have,” adding that there is “a fatigue with constantly changing policies in New York City and an inability to follow through.” 
+    </p>
+
+    <p>
+     New Yorkers have been required to separate organic waste since October 2024. When ticketing for noncompliance began in April 2025, the residential organic waste capture rate increased by nearly 200 percent, rising to more than 9,000 tons in April from about 3,100 tons in March, according to NYC Open Data. 
+     </p>
+
      <iframe title="Residential Food Waste Collected in NYC, 2025 (tons)" 
      aria-label="Line chart" 
      id="datawrapper-chart-XNbGX" 
-     src="https://datawrapper.dwcdn.net/XNbGX/3/" 
+     src="https://datawrapper.dwcdn.net/XNbGX/4/" 
      scrolling="no" 
      frameborder="0" 
-     style="width: 0; min-width: 100% !important; border: none; margin-top: var(--spacing-sm); margin-bottom: var(--spacing-sm);" 
-     height="410" 
-     data-external="1"></iframe><script type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});
+     style="width: 0; min-width: 100% !important; border: none;" 
+     height="410" data-external="1"></iframe>
+     <script type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});
     </script>
-     
-    <div class="datawrapper-map-box">
+
+    <p class="chart-transition-paragraph">
+     Enforcement halted in April and while the capture rate gradually decreased between May and October, November’s totals reached record highs, according to the Department of Sanitation. Even so, the city is only capturing a fraction of its organic waste. 
+     </p>
+
+     <div class="datawrapper-map-box">
       <iframe title="Organic Waste Collection Spiked Across NYC When Fines Began in April 2025" 
       aria-label="Choropleth map" 
       id="datawrapper-chart-ElVSn" 
@@ -112,10 +116,6 @@ This is your page!
     </div>
      <script type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});
     </script>
-
-     <p>
-     Enforcement halted in April and while the capture rate gradually decreased between May and October, November’s totals reached record highs, according to the Department of Sanitation. Even so, the city is only capturing a fraction of its organic waste. 
-     </p>
 
     <p>
       Michael Crorkin, 25, the superintendent of an 18-unit apartment building in Murray Hill, said fines are “absolutely necessary,” arguing that without them, a lot of buildings would avoid complying.
@@ -176,6 +176,11 @@ This is your page!
 </div>
 
 <style>
+  .container :global(article.article-body p.chart-transition-paragraph) {
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+  }
+
   .datawrapper-map-box {
     margin: var(--spacing-sm) 0 var(--spacing-md);
     padding: var(--spacing-sm);
