@@ -16,7 +16,7 @@ This is your page!
 
   // Article metadata
   let headline = 'Mayor-Elect Mamdani Signals the City Will Keep Mandatory Composting';
-  let byline = 'Chloe Rogers';
+  let byline = 'Chloe Shoko Rogers';
   let pubDate = '2025-12-18';
 </script>
 
@@ -41,7 +41,7 @@ This is your page!
     src="/bins.JPG"
     alt="The Craig Newmark Graduate School of Journalism is at 219 West 40th Street in Midtown Manhattan."
     caption="New York City waste bins"
-    credit="Chloe Rogers"
+    credit="Chloe Shoko Rogers"
   />
 
   <!-- Article Body: The main story text with proper typography -->
@@ -132,7 +132,7 @@ This is your page!
     <p>
       Crorkin's skepticism is borne out by the numbers — the city is only capturing about 10 percent of its organic waste. Samantha MacBride, a professor at Baruch College who teaches sustainability, said that means a significant portion of the city's roughly $500 million annual waste export budget is spent transporting organics to landfills that could have been diverted.
     </p>
-    
+
     <p>
       MacBride said the core issue is a lack of effective education by the Department of Sanitation. While the department said in a request for comment that it has conducted a “massive amount of public education including knocking on nearly 800,000 doors,” MacBride said that the department has failed to work with owners and managers of apartment buildings to increase participation, noting that they are only required to place the correct bins outside.
     </p>
