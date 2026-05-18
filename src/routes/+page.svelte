@@ -15,9 +15,9 @@ This is your page!
   let { data } = $props();
 
   // Article metadata
-  let headline = 'Mayor-Elect Mamdani Signals the City Will Keep Mandatory Composting';
+  let headline = 'Mayor Mamdani Keeps Mandatory Composting';
   let byline = 'Chloe Shoko Rogers';
-  let pubDate = '2025-12-18';
+  let pubDate = '2025-05-18';
 </script>
 
 <!-- This sets the page title in the browser tab -->
@@ -29,33 +29,31 @@ This is your page!
 <!-- Your page content goes here -->
 <div class="container">
   
-  <!-- Article Header: Headline, byline, and publication date -->
-  <ArticleHeader
-    {headline}
-    {byline}
-    {pubDate}
-  />
+  <!-- Lead Image with overlaid header -->
+  <div class="header-image" style="background-image: url('/bins.JPG');">
+    <div class="header-overlay">
+      <div class="header-content">
+        <h1>{headline}</h1>
+        <p class="byline">{byline}</p>
+        <p class="pubdate">{pubDate}</p>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <!-- Lead Image: Animated gif of students at the journalism school -->
-  <Image
-    src="/bins.JPG"
-    alt="The Craig Newmark Graduate School of Journalism is at 219 West 40th Street in Midtown Manhattan."
-    caption="New York City waste bins"
-    credit="Chloe Shoko Rogers"
-  />
-
-  <!-- Article Body: The main story text with proper typography -->
+<!-- Article content starts here -->
+<div class="container">
   <ArticleBody>
     <p>
-      Mayor-elect Zohran Mamdani has signaled that New York City will maintain its requirement that residents separate their organic waste — food scraps, compostable paper and yard trimmings — from other trash. 
+      Mayor-elect Zohran Mamdani is maintaining New York City's requirement that residents separate their organic waste — food scraps, compostable paper and yard trimmings — from other trash. 
     </p>
 
     <p>
-      The organic waste is processed into compost or renewable energy, a key component of reducing the city’s carbon footprint and the amount of waste sent to landfills. The Department of Sanitation states that residents can be fined up to $300 for noncompliance. But Mayor Eric Adams paused most enforcement just weeks after ticketing began in April, saying fines would resume sometime in 2026. 
+      The organic waste is processed into compost or renewable energy, a key component of reducing the city’s carbon footprint and the amount of waste sent to landfills. The Department of Sanitation states that residents can be fined up to $300 for noncompliance. But Mayor Eric Adams paused most enforcement just weeks after ticketing began last April, saying fines would resume sometime in 2026. 
     </p>
      
     <p>
-      Under Adams’ pause, enforcement is paused for most buildings, except for those with more than 30 units that receive four warnings. The agency continues to issue warnings to residents in buildings of all sizes as an educational reminder that participation is mandatory, but fines are not being issued at this time beyond that exception.
+      Under Adams, enforcement was paused for most buildings, except for those with more than 30 units that receive four warnings. The agency continued to issue warnings to residents in buildings of all sizes as an educational reminder that participation is mandatory, but fines were not being issued at this time beyond that exception.
     </p>
 
     <Timeline
@@ -76,10 +74,7 @@ This is your page!
     />
 
     <p>
-      With fines set to resume sometime in 2026 and a new mayor taking office in January, the future of enforcement is uncertain. Meanwhile, the city is capturing only 10 percent of its organic waste — a fraction of what it needs to meet its goal of sending zero waste to landfills by 2030."
-    </p>
-    <p>
-      Asked how he would handle the issue, Mamdani said at a press conference on December 9th, “we have to fully follow through on the policies we have,” adding that there is “a fatigue with constantly changing policies in New York City and an inability to follow through.” 
+      Fines resumed in 2026 with Mamdani taking office in January. Still, the city only captures only 10 percent of its organic waste — a fraction of what it needs to meet its goal of sending zero waste to landfills by 2030."
     </p>
 
     <p>
@@ -110,28 +105,15 @@ This is your page!
       scrolling="no" 
       frameborder="0" 
       style="width: 0; min-width: 100% !important; border: none;" 
-      height="800" 
+      height="180" 
       data-external="1">
       </iframe>
     </div>
      <script type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});
     </script>
 
-    <p>
-      Michael Crorkin, 25, the superintendent of an 18-unit apartment building in Murray Hill, said fines are “absolutely necessary,” arguing that without them, a lot of buildings would avoid complying.
-    </p>
+   <p>The city is only capturing about 10 percent of its organic waste. Samantha MacBride, a professor at Baruch College who teaches sustainability, said that means a significant portion of the city's roughly $500 million annual waste export budget is spent transporting organics to landfills that could have been diverted.</p>
 
-    <p>
-     Still, he says most residents either don’t want to separate organics or don’t know how to do it properly. 
-     </p>
-
-    <p>
-      “Just based on what I’ve seen with regular garbage and how they can’t even separate recycling like plastics and paper from regular waste, I don’t think they’re gonna take the time to compost,” Crorkin said. He added participation might increase if tenants were provided small in-unit compost bins, making separation easier to build into their daily routines. 
-    </p>
-
-    <p>
-      Crorkin's skepticism is borne out by the numbers — the city is only capturing about 10 percent of its organic waste. Samantha MacBride, a professor at Baruch College who teaches sustainability, said that means a significant portion of the city's roughly $500 million annual waste export budget is spent transporting organics to landfills that could have been diverted.
-    </p>
 
     <p>
       MacBride said the core issue is a lack of effective education by the Department of Sanitation. While the department said in a request for comment that it has conducted a “massive amount of public education including knocking on nearly 800,000 doors,” MacBride said that the department has failed to work with owners and managers of apartment buildings to increase participation, noting that they are only required to place the correct bins outside.
@@ -144,30 +126,77 @@ This is your page!
     <p>Marisa DeDominicis, co-founder and executive director of the community composting organization Earth Matter, said that the city should prioritize education starting as early as kindergarten. She said it’s more effective for people to understand why composting matters and how they can participate so they “feel good about their actions” rather than having stress or anxiety about getting a fine. 
     </p>
 
-    <p>
-      Meanwhile, the City Council’s Common Sense Caucus is pushing to eliminate the mandate to separate organic waste altogether, arguing that participation should be voluntary.
-    </p>
+    <div class="compost-box">
+      <h3>Here's what you <strong>can</strong> compost, according to the Department of Sanitation:</h3>
 
-    <p>
-      “Forcible mandates are wrong every time, whether they are forced vaccinations or mandated composting,” said Joann Ariola, caucus co-chair and council member. “People should still be free to choose. This is still America.”
-    </p>
-
-    <ContextBox
-      title="In addition to curbside pickup, how else can New Yorkers drop off their food scraps?"
-      items={[
-        "The city has 400 bright orange Smart Composting Bins, accessible 24/7 via the free NYC Compost app. They accept all food scraps and plant waste, including meat, dairy, and prepared foods.",
-        "More than 200 additional drop-off sites at community gardens, parks, schools, and nonprofits are also available across the five boroughs — but most do not accept meat, dairy, or prepared food. Hours and accepted materials vary by site.",
-      ]}      
-    />
-
-    <DropoffMap points={data.dropoffs} />
-
-    <ReadMore title="About the map data">
       <p>
-        This map uses <a href=https://data.cityofnewyork.us/Environment/Food-Scrap-Drop-Off-Locations-in-NYC/if26-z6xq/about_dataNYC>NYC Open Data</a> on Food Scrap Drop-Off Sites from the Department of Sanitation.
-        It currently includes {data.dropoffs.length} locations with valid coordinates.
+        <strong>Food scraps:</strong> vegetables and fruit, prepared foods, baked goods, cereal/flour/grains/pasta/rice, eggs and eggshells, dairy products, nuts, meat, fish, and bones.
       </p>
-    </ReadMore>
+
+      <p>
+        <strong>Paper products:</strong> paper towels and napkins, paper plates, coffee filters and tea bags, paper bags, paper food boats, paper trays, and plant-based compostable trays.
+      </p>
+
+      <p>
+        <strong>Other:</strong> compostable utensils and greasy uncoated paper plates, pizza boxes, and yard waste such as leaves.
+      </p>
+
+      <p>
+        A few things that might surprise you: you can also compost your hair and your pet's fur. And you don't need to take sticker labels off fruit or remove staples from tea bags before tossing them in. You can even put compostables inside plastic bags — industrial machines separate the plastic from the organic material. However, don't dump cooking oil or grease in the bin; put it in a container and throw it in the regular trash.
+      </p>
+
+      <p>
+        <strong>What you cannot compost:</strong> diapers, personal hygiene products, animal waste, wrappers, non-paper packaging, foam products, glass, metal, rigid plastic, and beverage cartons. PIX11
+      </p>
+
+      <p>
+        You can find more info at <a href="https://portal.311.nyc.gov/article/?kanumber=KA-02030">NYC 311's website</a>.
+      </p>
+    </div>
+
+    <div class="setout-box">
+      <h3>Set-Out Times</h3>
+
+      <p>Compost is collected every week on the same day as recycling.</p>
+
+      <p>Set composting out the night before your collection day:</p>
+
+      <ul>
+        <li>After 6 PM, if using a bin, or</li>
+        <li>After 8 PM, if putting bags of leaf and yard waste directly on the curb. You can mix food scraps with leaf and yard waste only if you are using a bin with a secure lid.</li>
+      </ul>
+
+      <p>To ensure collection, all waste must be set out by midnight before your collection day.</p>
+    </div>
+
+    <div class="map-section">
+      <div class="left-content">
+        <section class="dropoff-section">
+          <h2 class="dropoff-heading">📍 Options Beyond Curbside: Where to Drop Off Food Scraps</h2>
+          <p class="dropoff-subtitle">Smart Composting Bins, community garden and nonprofit drop-off sites — check accepted materials and hours.</p>
+
+          <ContextBox
+            title=""
+            items={[
+              "The city has 400 bright orange Smart Composting Bins, accessible 24/7 via the free NYC Compost app. They accept all food scraps and plant waste, including meat, dairy, and prepared foods.",
+              "More than 200 additional drop-off sites at community gardens, parks, schools, and nonprofits are also available across the five boroughs — but most do not accept meat, dairy, or prepared food. Hours and accepted materials vary by site.",
+            ]}      
+          />
+        </section>
+      </div>
+
+      <div class="map-container">
+        <DropoffMap points={data.dropoffs} />
+
+        <ReadMore title="About the map data">
+          <p>
+            This map uses <a href=https://data.cityofnewyork.us/Environment/Food-Scrap-Drop-Off-Locations-in-NYC/if26-z6xq/about_dataNYC>NYC Open Data</a> on Food Scrap Drop-Off Sites from the Department of Sanitation.
+            It currently includes {data.dropoffs.length} locations with valid coordinates.
+          </p>
+        </ReadMore>
+      </div>
+    </div>
+    
   
 </ArticleBody>
 
@@ -190,5 +219,144 @@ This is your page!
 
   .datawrapper-map-frame {
     display: block;
+  }
+
+  .compost-box {
+    margin: var(--spacing-md) 0;
+    padding: var(--spacing-sm);
+    background: var(--color-white);
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: var(--border-radius-sm);
+  }
+
+  .compost-box h3 {
+    margin-top: 0;
+  }
+
+  .setout-box {
+    margin: var(--spacing-md) 0;
+    padding: var(--spacing-sm);
+    background: #f6fff2;
+    border-left: 4px solid #4caf50;
+    border-radius: var(--border-radius-sm);
+  }
+
+  .setout-box h3 { margin-top: 0; }
+
+.setout-box ul { margin-left: 1.25rem; }
+
+  /* Increase page width and reduce side spacing so content uses more horizontal space */
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+  }
+
+  .container:first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  @media (max-width: 800px) {
+    .container {
+      padding-left: var(--spacing-sm);
+      padding-right: var(--spacing-sm);
+    }
+  }
+
+  .dropoff-section {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .dropoff-heading {
+    margin: 0 0 var(--spacing-2xs) 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #14532d;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .dropoff-subtitle {
+    margin: 0 0 var(--spacing-sm) 0;
+    color: rgba(0,0,0,0.7);
+    font-size: 0.95rem;
+  }
+
+  .map-section {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--spacing-lg);
+    align-items: start;
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-xl);
+    border-top: 3px solid rgba(0,0,0,0.2);
+    background-color: #f9fafb;
+    border-radius: var(--border-radius-sm);
+    box-shadow: none;
+  }
+
+  .left-content {
+    min-width: 0;
+    padding-top: var(--spacing-xs);
+  }
+
+  .map-container {
+    min-width: 0;
+  }
+
+  @media (max-width: 768px) {
+    .map-section {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .header-image {
+    background-size: cover;
+    background-position: center;
+    height: 280px;
+    position: relative;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-top: 0;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .header-overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-content {
+    text-align: center;
+    color: white;
+  }
+
+  .header-content h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: white;
+  }
+
+  .header-content .byline {
+    margin: 0 0 0.25rem 0;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .header-content .pubdate {
+    margin: 0;
+    font-size: 0.85rem;
+    opacity: 0.95;
   }
 </style>
