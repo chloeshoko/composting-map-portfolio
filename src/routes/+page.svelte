@@ -30,7 +30,7 @@ This is your page!
 <div class="container">
   
   <!-- Lead Image with overlaid header -->
-  <div class="header-image" style="background-image: url('/bins.JPG');">
+  <div class="header-image" style="background-image: url('bins.JPG');">
     <div class="header-overlay">
       <div class="header-content">
         <h1>{headline}</h1>
